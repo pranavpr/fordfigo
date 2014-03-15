@@ -1,5 +1,5 @@
 <?php
-$pid=$_POST['pid']; 
+$pid=$_GET['pid']; 
 echo $pid;
 # This function reads DATABASE_URL configuration set by Heroku
 # the return value is a string that will work with pg_connect

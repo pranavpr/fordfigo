@@ -115,14 +115,6 @@ jQuery(document).ready(function($) {
 </head>
 
 <body>
-<!--Resize Iframe-->
-<script src="https://connect.facebook.net/en_US/all.js"></script>
-<script>
-
- FB.Canvas.setAutoResize(7);
-
- </script>
- <!-- End Resize Iframe-->
 <div class="wrapper">
 
 	<div class="maincontent">

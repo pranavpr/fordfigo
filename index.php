@@ -35,7 +35,7 @@ if ($user) {
 <meta charset="utf-8">
 <title>Ford Figo</title>
 
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.14.1/build/cssreset/cssreset-min.css">
+<link rel="stylesheet" type="text/css" href="css/cssreset-min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 <script src="js/myjava.js" type="text/javascript"></script>

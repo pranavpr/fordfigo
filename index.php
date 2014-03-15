@@ -64,8 +64,16 @@ jQuery(document).ready(function($) {
         type: 'POST',
         data: serializedData
     })
-    .done(function() {
-        console.log("success");
+    .done(function(result) {
+        if(result == 'Success'){
+            $form.css({
+                display: 'none'
+            });
+            $("#result").html("Thanks for sharing your experience.");
+            $("#result").css({
+                display: 'block'
+            });
+        }
     })
     .fail(function() {
         console.log("error");
@@ -113,6 +121,7 @@ Tell us about your Figo experience.
 <input type="text" name="name" value=<?php echo $user_profile['name']; ?>><br/>
 <input type="submit" value="Submit">
 </form>
+<div id='result' style="display:none;"></div>
             </div><!--End Blog Post-->
 		
     </div><!--End Tab 1-->

@@ -16,11 +16,7 @@ if (!$db) {
 }
 $result = pg_query($db, "insert into Persons (Name, FacebookId, Comment) values ('$name', '$fbid', '$comment');");
 //dump the result object
-var_dump($result);
-
+echo "Success";
 // Closing connection
 pg_close($db);
-echo $name;
-echo $fbid;
-echo $comment;
 ?>

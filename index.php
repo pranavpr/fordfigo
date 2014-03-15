@@ -39,6 +39,45 @@ if ($user) {
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 <script src="js/myjava.js" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    // variable to hold request
+    var request;
+    $("#myform").submit(function(event){
+    // abort any pending request
+    if (request) {
+        request.abort();
+    }
+    // setup some local variables
+    var $form = $(this);
+    // let's select and cache all the fields
+    var $inputs = $form.find("input, select, button, textarea");
+    // serialize the data in the form
+    var serializedData = $form.serialize();
+
+    // let's disable the inputs for the duration of the ajax request
+    $inputs.prop("disabled", true);
+
+    // fire off the request to /form.php
+    $.ajax({
+        url: '/submit.php',
+        type: 'POST',
+        data: serializedData
+    })
+    .done(function() {
+        console.log("success");
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        $inputs.prop("disabled", false);
+    });
+    // prevent default posting of form
+    event.preventDefault();
+});
+});
+</script>
 </head>
 
 <body>
@@ -66,7 +105,7 @@ if ($user) {
 
 	
 			 <div class="post">
-<form name="input" action="submit.php" method="post">
+<form name="input" id="myform" method="post">
 <textarea name="comment" rows="4" cols="50">
 Tell us about your Figo experience.
 </textarea><br/>

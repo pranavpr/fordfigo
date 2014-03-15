@@ -79,7 +79,7 @@ $likes = $json_output->likes;
 <html>
 <head>
 <meta charset="utf-8">
-<title>Ford Figo App</title>
+<title>Ford Figo</title>
 
 <link rel="stylesheet" type="text/css" href="https://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -114,30 +114,28 @@ $likes = $json_output->likes;
 
 <div class="tab_container">
     <div class="tab_content tab1">
-   			
-    <?php
-	
-	//Create a variable that we can use to auto increment 
-	$i=0;
-	
-	//Loop out our yql feedburner feed
-	foreach ($yqlfeed->query->results->entry as $item ) {
-	
- 	?>
+
 	
 			 <div class="post">
-                    <h3><a  href="<?php echo $item->link->href;?>" target="_blank"><?php echo $item->title;?></a></h3>
-                    <span class="postInfo">by <a href="#"><?php echo $item->author->name;?></a> on <?php echo substr($item->published,0,-9);?></span>
-                    <p><?php echo $item->content->content;?></p>
-                    <a class="more" href="<?php echo $item->link->href;?>" target="_blank">Read More</a>
-                    <span class="line"></span>
-                     
-                    <span class="line"></span>
+<?php
+# This function reads your DATABASE_URL configuration automatically set by Heroku
+# the return value is a string that will work with pg_connect
+function pg_connection_string() {
+  return "dbname=d56jl9rpuri4us host=ec2-184-73-194-196.compute-1.amazonaws.com port=5432 user=bsegsbwhqrwkvt password=SluOhNXZ9yUxlQaHOtt_8muJCN sslmode=require";
+}
+ 
+# Establish db connection
+$db = pg_connect(pg_connection_string());
+if (!$db) {
+    echo "Database connection error."
+    exit;
+}
+ 
+$result = pg_query($db, "select * from Persons");
+var_dump($result);
+?>
             </div><!--End Blog Post-->
 		
-		
-	
-	<?php }?>
     
     <p>No More Posts</p>
         

@@ -56,6 +56,7 @@ function getRandomComment () {
     });
 }
 jQuery(document).ready(function($) {
+    getRandomComment();
     setInterval( getRandomComment, 30000 );
     // variable to hold request
     var request;

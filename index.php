@@ -33,7 +33,7 @@ if ($user) {
   
 
   
-
+/*
 
 // The YQL query to get the webdesigntuts+ summary posts from feedburner
 
@@ -72,7 +72,7 @@ $json_output = json_decode($json);
 $likes = 0;
 if($json_output->likes){
 $likes = $json_output->likes;
-}
+}*/
 
 ?>
 <!DOCTYPE HTML>
@@ -135,12 +135,6 @@ $result = pg_query($db, "select * from Persons");
 ?>
             </div><!--End Blog Post-->
 		
-    
-    <p>No More Posts</p>
-        
-        
-        
-        
     </div><!--End Tab 3-->
     
     <div class="tab_content tab2">
@@ -157,7 +151,7 @@ $result = pg_query($db, "select * from Persons");
     
     </div><!--End Tab 2 -->
     
-    <div class="tab_content tab3">
+    <!--<div class="tab_content tab3">
 
      <h3>Write For Us</h3>
     
@@ -172,7 +166,7 @@ $result = pg_query($db, "select * from Persons");
     
     </div><!--End Tab 3 -->
     
-     <div class="tab_content tab4">
+     <!--<div class="tab_content tab4">
 
      <h3>Other Blogs</h3>
      

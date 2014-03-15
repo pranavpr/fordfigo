@@ -127,10 +127,10 @@ function pg_connection_string() {
 # Establish db connection
 $db = pg_connect(pg_connection_string());
 if (!$db) {
-    echo "Database connection error."
+    echo "Database connection error.";
     exit;
 }
- 
+echo "Success";
 $result = pg_query($db, "select * from Persons");
 var_dump($result);
 ?>

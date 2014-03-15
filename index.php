@@ -70,8 +70,8 @@ if ($user) {
 <textarea name="comment" rows="4" cols="50">
 Tell us about your Figo experience.
 </textarea><br/>
-<input type="text" name="fbid" value=<?php $user_profile['id'] ?>><br/>
-<input type="text" name="name" value=<?php $user_profile['name'] ?>><br/>
+<input type="text" name="fbid" value=<?php echo $user_profile['id']; ?>><br/>
+<input type="text" name="name" value=<?php echo $user_profile['name']; ?>><br/>
 <input type="submit" value="Submit">
 </form>
             </div><!--End Blog Post-->

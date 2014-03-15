@@ -1,7 +1,5 @@
 <?php
-$fbid=$_POST['fbid']; 
-$name=$_POST['name']; 
-$comment=$_POST['comment']; 
+$id=$_POST['pid']; 
 # This function reads DATABASE_URL configuration set by Heroku
 # the return value is a string that will work with pg_connect
 function pg_connection_string() {
@@ -14,9 +12,10 @@ if (!$db) {
     echo "Database connection error.";
     exit;
 }
-$result = pg_query($db, "insert into Persons (Name, FacebookId, Comment) values ('$name', '$fbid', '$comment');");
+$result = pg_query($db, "select Name, Comment from Persons where PersonID='$pid';");
 //dump the result
-echo "Success";
-// Closing connection
+while ($row = pg_fetch_row($result)) {
+  echo "$row[0] says $row[1]";
+}// Closing connection
 pg_close($db);
 ?>

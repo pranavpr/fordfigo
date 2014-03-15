@@ -14,7 +14,7 @@ if (!$db) {
     echo "Database connection error.";
     exit;
 }
-$result = pg_query($db, "insert into Persons (Name, FacebookId, Comment) values ('$name', '$fbid', '$comment')");
+$result = pg_query($db, "insert into Persons (Name, FacebookId, Comment) values ('$name', '$fbid', '$comment');");
 //dump the result object
 var_dump($result);
 

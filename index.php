@@ -53,10 +53,6 @@ function getRandomComment () {
     .fail(function(data) {
         $("#comments").html(data);
         console.log("error");
-    })
-    .always(function(data) {
-        $("#comments").html(data);
-        console.log("complete");
     });
 }
 jQuery(document).ready(function($) {

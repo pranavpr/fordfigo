@@ -143,13 +143,14 @@ Tell us about your Figo experience.
     
     <div class="tab_content tab2">
     
-    <h3>About</h3>
-    
-    <p>Webdesigntuts+ is a blog made to house and showcase some of the best web design tutorials and articles around. We publish tutorials that not only produce great results and interfaces, but explain the techniques behind them in a friendly, approachable manner.</p>
-    
-    <p>Web design is a booming industry with a lot of competition. We hope that reading Webdesigntuts+ will help our readers learn a few tricks, techniques and tips that they might not have seen before and help them maximize their creative potential!</p>
-    
-    <p><strong>Webdesigntuts+ is part of the Tuts+ Network</strong></p>
+    <h3>Upload your image.</h3>
+<form action="upload_file.php" method="post"
+enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file"><br>
+<input type="submit" name="submit" value="Submit">
+</form>
+
 
     </div>
     

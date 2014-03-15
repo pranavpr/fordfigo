@@ -82,6 +82,12 @@ if (!$db) {
 echo "Success";
 $result = pg_query($db, "select * from Persons");
 ?>
+<form name="input" action="submit.php" method="post">
+<textarea rows="4" cols="50">
+Tell us about your Figo experience.
+</textarea>
+<input type="submit" value="Submit">
+</form>
             </div><!--End Blog Post-->
 		
     </div><!--End Tab 1-->

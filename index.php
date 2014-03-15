@@ -49,10 +49,6 @@ function getRandomComment () {
     })
     .done(function(data) {
         $("#comments").html(data);
-    })
-    .fail(function(data) {
-        $("#comments").html(data);
-        console.log("error");
     });
 }
 jQuery(document).ready(function($) {

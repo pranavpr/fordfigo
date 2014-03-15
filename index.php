@@ -132,7 +132,6 @@ if (!$db) {
 }
 echo "Success";
 $result = pg_query($db, "select * from Persons");
-var_dump($result);
 ?>
             </div><!--End Blog Post-->
 		

@@ -40,7 +40,26 @@ if ($user) {
 <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 <script src="js/myjava.js" type="text/javascript"></script>
 <script type="text/javascript">
+function getRandomComment () {
+     var randpid = Math.floor((Math.random()*10)+1);
+    $.ajax({
+        url: 'get.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {pid: randpid}
+    })
+    .done(function(data) {
+        $("#comments").html(data);
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+}
 jQuery(document).ready(function($) {
+    setInterval( getRandomComment, 30000 );
     // variable to hold request
     var request;
     $("#myform").submit(function(event){
@@ -137,8 +156,9 @@ Tell us about your Figo experience.
 <input type="submit" value="Submit">
 </form>
 <div id='result' style="display:none;"></div>
-            </div><!--End Blog Post-->
-		
+            </div>
+<div id='comments'>
+</div>
     </div><!--End Tab 1-->
     
     <div class="tab_content tab2">

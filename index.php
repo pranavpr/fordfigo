@@ -79,7 +79,7 @@ $likes = $json_output->likes;
 <html>
 <head>
 <meta charset="utf-8">
-<title>Ford Figo</title>
+<title>Ford Figo App</title>
 
 <link rel="stylesheet" type="text/css" href="https://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">

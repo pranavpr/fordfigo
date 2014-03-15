@@ -41,7 +41,7 @@ if ($user) {
 <script src="js/myjava.js" type="text/javascript"></script>
 <script type="text/javascript">
 function getRandomComment () {
-     var randpid = Math.floor((Math.random()*10)+1);
+     var randpid = Math.floor((Math.random()*13)+1);
     $.ajax({
         url: '/get.php',
         type: 'POST',

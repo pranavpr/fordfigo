@@ -45,7 +45,6 @@ function getRandomComment () {
     $.ajax({
         url: '/get.php',
         type: 'POST',
-        dataType: 'json',
         data: {pid: randpid}
     })
     .done(function(data) {

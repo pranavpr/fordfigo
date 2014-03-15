@@ -74,9 +74,24 @@ jQuery(document).ready(function($) {
                 display: 'block'
             });
         }
+        else{
+            $form.css({
+                display: 'none'
+            });
+            $("#result").html("Oh! Something went wrong.");
+            $("#result").css({
+                display: 'block'
+            });
+        }
     })
     .fail(function() {
-        console.log("error");
+        $form.css({
+                display: 'none'
+            });
+            $("#result").html("Oh! Something went wrong.");
+            $("#result").css({
+                display: 'block'
+            });
     })
     .always(function() {
         $inputs.prop("disabled", false);
@@ -117,8 +132,8 @@ jQuery(document).ready(function($) {
 <textarea name="comment" rows="4" cols="50">
 Tell us about your Figo experience.
 </textarea><br/>
-<input type="text" name="fbid" value=<?php echo $user_profile['id']; ?>><br/>
-<input type="text" name="name" value=<?php echo $user_profile['name']; ?>><br/>
+<input type="hidden" name="fbid" value=<?php echo $user_profile['id']; ?>><br/>
+<input type="hidden" name="name" value=<?php echo $user_profile['name']; ?>><br/>
 <input type="submit" value="Submit">
 </form>
 <div id='result' style="display:none;"></div>

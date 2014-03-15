@@ -20,4 +20,7 @@ var_dump($result);
 
 // Closing connection
 pg_close($db);
+echo $name;
+echo $fbid;
+echo $comment;
 ?>

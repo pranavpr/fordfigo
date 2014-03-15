@@ -156,10 +156,9 @@ Tell us about your Figo experience.
 <input type="submit" value="Submit">
 </form>
 <div id='result' style="display:none;"></div>
-            </div>
 <div id='comments'>
-    Here
 </div>
+            </div>
     </div><!--End Tab 1-->
     
     <div class="tab_content tab2">

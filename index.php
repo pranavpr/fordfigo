@@ -144,10 +144,10 @@ Tell us about your Figo experience.
     <div class="tab_content tab2">
     
     <h3>Upload your image.</h3>
-<form action="upload_file.php" method="post"
+<form action="upload.php" method="post"
 enctype="multipart/form-data">
 <label for="file">Filename:</label>
-<input type="file" name="file" id="file"><br>
+<input type="file" name="file" id="file"><br/><br/>
 <input type="submit" name="submit" value="Submit">
 </form>
 

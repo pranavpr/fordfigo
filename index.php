@@ -48,7 +48,7 @@ function getRandomComment () {
         data: {pid: randpid}
     })
     .done(function(data) {
-        $("#comments").html(data);
+        $("#comments").html("<h3>"+data+"</h3>");
     });
 }
 jQuery(document).ready(function($) {

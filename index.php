@@ -108,8 +108,8 @@ $likes = $json_output->likes;
         <ul class="tabs">
             <li><a href=".tab1">Posts</a></li>
             <li><a href=".tab2">About</a></li>
-            <li><a href=".tab3">Write For Us</a></li>
-             <li><a href=".tab4">Other Blogs</a></li>
+            <!--<li><a href=".tab3">Write For Us</a></li>
+             <li><a href=".tab4">Other Blogs</a></li>-->
          </ul>
 
 <div class="tab_container">

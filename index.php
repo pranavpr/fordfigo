@@ -79,13 +79,12 @@ if (!$db) {
     echo "Database connection error.";
     exit;
 }
-echo "Success";
 $result = pg_query($db, "select * from Persons");
 ?>
 <form name="input" action="submit.php" method="post">
 <textarea rows="4" cols="50">
 Tell us about your Figo experience.
-</textarea>
+</textarea><br/>
 <input type="submit" value="Submit">
 </form>
             </div><!--End Blog Post-->

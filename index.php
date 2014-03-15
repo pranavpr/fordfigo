@@ -43,7 +43,7 @@ if ($user) {
 function getRandomComment () {
      var randpid = Math.floor((Math.random()*10)+1);
     $.ajax({
-        url: 'get.php',
+        url: '/get.php',
         type: 'POST',
         dataType: 'json',
         data: {pid: randpid}
@@ -158,6 +158,7 @@ Tell us about your Figo experience.
 <div id='result' style="display:none;"></div>
             </div>
 <div id='comments'>
+    Here
 </div>
     </div><!--End Tab 1-->
     
